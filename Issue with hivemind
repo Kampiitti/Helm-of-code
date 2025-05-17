@@ -1,1 +1,7 @@
-Invoke-WebRequest -Uri "http://localhost:8000/threads" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"title":"Test Thread"}'
+Invoke-WebRequest : {"error":"Failed to create thread"}
+At line:1 char:1
++ Invoke-WebRequest -Uri "http://localhost:8000/threads" -Method Post - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc
+   eption
+    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
