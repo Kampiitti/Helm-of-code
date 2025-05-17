@@ -1,7 +1,7 @@
-api.js:28 
- GET http://localhost:8000/threads/new 500 (Internal Server Error)
+api.js:30 
+ POST http://localhost:8000/threads 500 (Internal Server Error)
 Promise.then		
-fetchThread	@	api.js:28
+fetchThread	@	api.js:30
 fetchThreadData	@	ThreadPage.js:23
 (anonymous)	@	ThreadPage.js:17
 ThreadPage.js:32 Error fetching thread data: 
@@ -36,204 +36,31 @@ Error
 fetchThreadData	@	ThreadPage.js:32
 await in fetchThreadData		
 (anonymous)	@	ThreadPage.js:17
-favicon.ico:1 
- GET http://localhost:3000/favicon.ico 500 (Internal Server Error)
-api.js:33 
- GET http://localhost:8000/messages/thread/new 500 (Internal Server Error)
+api.js:30 
+ POST http://localhost:8000/threads 500 (Internal Server Error)
 Promise.then		
-fetchMessages	@	api.js:33
-fetchThreadData	@	ThreadPage.js:23
-(anonymous)	@	ThreadPage.js:17
-api.js:28 
- GET http://localhost:8000/threads/new 500 (Internal Server Error)
-Promise.then		
-fetchThread	@	api.js:28
+fetchThread	@	api.js:30
 fetchThreadData	@	ThreadPage.js:23
 (anonymous)	@	ThreadPage.js:17
 ThreadPage.js:32 Error fetching thread data: 
 AxiosError {message: 'Request failed with status code 500', name: 'AxiosError', code: 'ERR_BAD_RESPONSE', config: {…}, request: XMLHttpRequest, …}
-code
-: 
-"ERR_BAD_RESPONSE"
-config
-: 
-adapter
-: 
-Array(3)
-0
-: 
-"xhr"
-1
-: 
-"http"
-2
-: 
-"fetch"
-length
-: 
-3
-[[Prototype]]
-: 
-Array(0)
-allowAbsoluteUrls
-: 
-true
-baseURL
-: 
-"http://localhost:8000"
-data
-: 
-undefined
-env
-: 
-{FormData: ƒ, Blob: ƒ}
-headers
-: 
-AxiosHeaders {Accept: 'application/json, text/plain, */*', Content-Type: 'application/json'}
-maxBodyLength
-: 
--1
-maxContentLength
-: 
--1
-method
-: 
-"get"
-timeout
-: 
-0
-transformRequest
-: 
-[ƒ]
-transformResponse
-: 
-[ƒ]
-transitional
-: 
-{silentJSONParsing: true, forcedJSONParsing: true, clarifyTimeoutError: false}
-url
-: 
-"/threads/new"
-validateStatus
-: 
-ƒ validateStatus(status)
-xsrfCookieName
-: 
-"XSRF-TOKEN"
-xsrfHeaderName
-: 
-"X-XSRF-TOKEN"
-[[Prototype]]
-: 
-Object
-message
-: 
-"Request failed with status code 500"
-name
-: 
-"AxiosError"
-request
-: 
-XMLHttpRequest
-onabort
-: 
-ƒ handleAbort()
-onerror
-: 
-ƒ handleError()
-onload
-: 
-null
-onloadend
-: 
-ƒ onloadend()
-onloadstart
-: 
-null
-onprogress
-: 
-null
-onreadystatechange
-: 
-null
-ontimeout
-: 
-ƒ handleTimeout()
-readyState
-: 
-4
-response
-: 
-"{\"error\":\"Failed to fetch thread\"}"
-responseText
-: 
-"{\"error\":\"Failed to fetch thread\"}"
-responseType
-: 
-""
-responseURL
-: 
-"http://localhost:8000/threads/new"
-responseXML
-: 
-null
-status
-: 
-500
-statusText
-: 
-"Internal Server Error"
-timeout
-: 
-0
-upload
-: 
-XMLHttpRequestUpload {onloadstart: null, onprogress: null, onabort: null, onerror: null, onload: null, …}
-withCredentials
-: 
-false
-[[Prototype]]
-: 
-XMLHttpRequest
-response
-: 
-config
-: 
-{transitional: {…}, adapter: Array(3), transformRequest: Array(1), transformResponse: Array(1), timeout: 0, …}
-data
-: 
-{error: 'Failed to fetch thread'}
-headers
-: 
-AxiosHeaders {content-length: '34', content-type: 'application/json; charset=utf-8'}
-request
-: 
-XMLHttpRequest {onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
-status
-: 
-500
-statusText
-: 
-"Internal Server Error"
-[[Prototype]]
-: 
-Object
-status
-: 
-500
-stack
-: 
-"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/static/js/bundle.js:6982:12)\n    at XMLHttpRequest.onloadend (http://localhost:3000/static/js/bundle.js:5619:66)\n    at Axios.request (http://localhost:3000/static/js/bundle.js:6118:41)\n    at async Promise.all (index 0)\n    at async fetchThreadData (http://localhost:3000/static/js/bundle.js:53182:50)"
-[[Prototype]]
-: 
-Error
 fetchThreadData	@	ThreadPage.js:32
 await in fetchThreadData		
 (anonymous)	@	ThreadPage.js:17
-api.js:33 
+api.js:38 
  GET http://localhost:8000/messages/thread/new 500 (Internal Server Error)
 Promise.then		
-fetchMessages	@	api.js:33
+fetchMessages	@	api.js:38
 fetchThreadData	@	ThreadPage.js:23
 (anonymous)	@	ThreadPage.js:17
-
+favicon.ico:1 
+ GET http://localhost:3000/favicon.ico 500 (Internal Server Error)
+api.js:38 
+ GET http://localhost:8000/messages/thread/new 500 (Internal Server Error)
+Promise.then		
+fetchMessages	@	api.js:38
+fetchThreadData	@	ThreadPage.js:23
+(anonymous)	@	ThreadPage.js:17
+logo192.png:1 
+ GET http://localhost:3000/logo192.png 500 (Internal Server Error)
+new:1 Error while trying to use the following icon from the Manifest: http://localhost:3000/logo192.png (Download error or resource isn't a valid image)
