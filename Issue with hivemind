@@ -1,13 +1,1 @@
-Invoke-WebRequest : {"error":"Failed to create thread"}
-At line:1 char:13
-+ $response = Invoke-WebRequest -Uri "http://localhost:8000/threads" -M ...
-+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebExc
-   eption
-    + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
-You cannot call a method on a null-valued expression.
-At line:1 char:191
-+ ... if ($err) { $err.Exception.Response.GetResponseStream() | ForEach-Obj ...
-+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
-    + FullyQualifiedErrorId : InvokeMethodOnNull
+try { $response = Invoke-WebRequest -Uri "http://localhost:8000/threads" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"title":"Test Thread"}' } catch { $_.ErrorDetails.Message }
