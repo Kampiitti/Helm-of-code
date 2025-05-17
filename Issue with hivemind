@@ -1,7 +1,1 @@
-Invoke-WebRequest : Cannot bind parameter 'Headers'. Cannot convert the "Content-Type: application/json" value of type
-"System.String" to type "System.Collections.IDictionary".
-At line:1 char:47
-+ ... ://localhost:8000/threads -H "Content-Type: application/json" -d '{"t ...
-+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidArgument: (:) [Invoke-WebRequest], ParameterBindingException
-    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+Invoke-WebRequest -Uri "http://localhost:8000/threads" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"title":"Test Thread"}'
