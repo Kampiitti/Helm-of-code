@@ -1,9 +1,28 @@
-api.js:38 
- GET http://localhost:8000/messages/thread/new 500 (Internal Server Error)
+api.js:30 
+ POST http://localhost:8000/threads 500 (Internal Server Error)
+dispatchXhrRequest	@	xhr.js:195
+xhr	@	xhr.js:15
+dispatchRequest	@	dispatchRequest.js:51
 Promise.then		
-fetchMessages	@	api.js:38
+_request	@	Axios.js:163
+request	@	Axios.js:40
+httpMethod	@	Axios.js:226
+wrap	@	bind.js:5
+fetchThread	@	api.js:30
 fetchThreadData	@	ThreadPage.js:23
 (anonymous)	@	ThreadPage.js:17
+commitHookEffectListMount	@	react-dom.development.js:23189
+commitPassiveMountOnFiber	@	react-dom.development.js:24970
+commitPassiveMountEffects_complete	@	react-dom.development.js:24930
+commitPassiveMountEffects_begin	@	react-dom.development.js:24917
+commitPassiveMountEffects	@	react-dom.development.js:24905
+flushPassiveEffectsImpl	@	react-dom.development.js:27078
+flushPassiveEffects	@	react-dom.development.js:27023
+commitRootImpl	@	react-dom.development.js:26974
+commitRoot	@	react-dom.development.js:26721
+performSyncWorkOnRoot	@	react-dom.development.js:26156
+flushSyncCallbacks	@	react-dom.development.js:12042
+(anonymous)	@	react-dom.development.js:25690
 ThreadPage.js:32 Error fetching thread data: 
 AxiosError {message: 'Request failed with status code 500', name: 'AxiosError', code: 'ERR_BAD_RESPONSE', config: {…}, request: XMLHttpRequest, …}
 code
@@ -11,7 +30,60 @@ code
 "ERR_BAD_RESPONSE"
 config
 : 
-{transitional: {…}, adapter: Array(3), transformRequest: Array(1), transformResponse: Array(1), timeout: 0, …}
+adapter
+: 
+(3) ['xhr', 'http', 'fetch']
+allowAbsoluteUrls
+: 
+true
+baseURL
+: 
+"http://localhost:8000"
+data
+: 
+"{\"title\":\"New Thread\"}"
+env
+: 
+{FormData: ƒ, Blob: ƒ}
+headers
+: 
+AxiosHeaders {Accept: 'application/json, text/plain, */*', Content-Type: 'application/json'}
+maxBodyLength
+: 
+-1
+maxContentLength
+: 
+-1
+method
+: 
+"post"
+timeout
+: 
+0
+transformRequest
+: 
+[ƒ]
+transformResponse
+: 
+[ƒ]
+transitional
+: 
+{silentJSONParsing: true, forcedJSONParsing: true, clarifyTimeoutError: false}
+url
+: 
+"/threads"
+validateStatus
+: 
+ƒ validateStatus(status)
+xsrfCookieName
+: 
+"XSRF-TOKEN"
+xsrfHeaderName
+: 
+"X-XSRF-TOKEN"
+[[Prototype]]
+: 
+Object
 message
 : 
 "Request failed with status code 500"
@@ -23,98 +95,7 @@ request
 XMLHttpRequest {onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
 response
 : 
-config
-: 
-{transitional: {…}, adapter: Array(3), transformRequest: Array(1), transformResponse: Array(1), timeout: 0, …}
-data
-: 
-error
-: 
-"Failed to fetch messages"
-[[Prototype]]
-: 
-Object
-headers
-: 
-AxiosHeaders {content-length: '36', content-type: 'application/json; charset=utf-8'}
-request
-: 
-XMLHttpRequest {onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
-status
-: 
-500
-statusText
-: 
-"Internal Server Error"
-[[Prototype]]
-: 
-Object
-status
-: 
-500
-stack
-: 
-"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/static/js/bundle.js:6982:12)\n    at XMLHttpRequest.onloadend (http://localhost:3000/static/js/bundle.js:5619:66)\n    at Axios.request (http://localhost:3000/static/js/bundle.js:6118:41)\n    at async Promise.all (index 1)\n    at async fetchThreadData (http://localhost:3000/static/js/bundle.js:53182:50)"
-[[Prototype]]
-: 
-Error
-api.js:30 
- POST http://localhost:8000/threads 500 (Internal Server Error)
-Promise.then		
-fetchThread	@	api.js:30
-fetchThreadData	@	ThreadPage.js:23
-(anonymous)	@	ThreadPage.js:17
-api.js:30 
- POST http://localhost:8000/threads 500 (Internal Server Error)
-Promise.then		
-fetchThread	@	api.js:30
-fetchThreadData	@	ThreadPage.js:23
-(anonymous)	@	ThreadPage.js:17
-ThreadPage.js:32 Error fetching thread data: 
-AxiosError {message: 'Request failed with status code 500', name: 'AxiosError', code: 'ERR_BAD_RESPONSE', config: {…}, request: XMLHttpRequest, …}
-code
-: 
-"ERR_BAD_RESPONSE"
-config
-: 
-{transitional: {…}, adapter: Array(3), transformRequest: Array(1), transformResponse: Array(1), timeout: 0, …}
-message
-: 
-"Request failed with status code 500"
-name
-: 
-"AxiosError"
-request
-: 
-XMLHttpRequest {onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
-response
-: 
-config
-: 
-{transitional: {…}, adapter: Array(3), transformRequest: Array(1), transformResponse: Array(1), timeout: 0, …}
-data
-: 
-error
-: 
-"Failed to create thread"
-[[Prototype]]
-: 
-Object
-headers
-: 
-AxiosHeaders {content-length: '35', content-type: 'application/json; charset=utf-8'}
-request
-: 
-XMLHttpRequest {onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
-status
-: 
-500
-statusText
-: 
-"Internal Server Error"
-[[Prototype]]
-: 
-Object
+{data: {…}, status: 500, statusText: 'Internal Server Error', headers: AxiosHeaders, config: {…}, …}
 status
 : 
 500
@@ -124,10 +105,107 @@ stack
 [[Prototype]]
 : 
 Error
+fetchThreadData	@	ThreadPage.js:32
+await in fetchThreadData		
+(anonymous)	@	ThreadPage.js:17
+commitHookEffectListMount	@	react-dom.development.js:23189
+commitPassiveMountOnFiber	@	react-dom.development.js:24970
+commitPassiveMountEffects_complete	@	react-dom.development.js:24930
+commitPassiveMountEffects_begin	@	react-dom.development.js:24917
+commitPassiveMountEffects	@	react-dom.development.js:24905
+flushPassiveEffectsImpl	@	react-dom.development.js:27078
+flushPassiveEffects	@	react-dom.development.js:27023
+commitRootImpl	@	react-dom.development.js:26974
+commitRoot	@	react-dom.development.js:26721
+performSyncWorkOnRoot	@	react-dom.development.js:26156
+flushSyncCallbacks	@	react-dom.development.js:12042
+(anonymous)	@	react-dom.development.js:25690
+api.js:30 
+ POST http://localhost:8000/threads 500 (Internal Server Error)
+dispatchXhrRequest	@	xhr.js:195
+xhr	@	xhr.js:15
+dispatchRequest	@	dispatchRequest.js:51
+Promise.then		
+_request	@	Axios.js:163
+request	@	Axios.js:40
+httpMethod	@	Axios.js:226
+wrap	@	bind.js:5
+fetchThread	@	api.js:30
+fetchThreadData	@	ThreadPage.js:23
+(anonymous)	@	ThreadPage.js:17
+commitHookEffectListMount	@	react-dom.development.js:23189
+invokePassiveEffectMountInDEV	@	react-dom.development.js:25193
+invokeEffectsInDev	@	react-dom.development.js:27390
+commitDoubleInvokeEffectsInDEV	@	react-dom.development.js:27369
+flushPassiveEffectsImpl	@	react-dom.development.js:27095
+flushPassiveEffects	@	react-dom.development.js:27023
+commitRootImpl	@	react-dom.development.js:26974
+commitRoot	@	react-dom.development.js:26721
+performSyncWorkOnRoot	@	react-dom.development.js:26156
+flushSyncCallbacks	@	react-dom.development.js:12042
+(anonymous)	@	react-dom.development.js:25690
+ThreadPage.js:32 Error fetching thread data: 
+AxiosError {message: 'Request failed with status code 500', name: 'AxiosError', code: 'ERR_BAD_RESPONSE', config: {…}, request: XMLHttpRequest, …}
+fetchThreadData	@	ThreadPage.js:32
+await in fetchThreadData		
+(anonymous)	@	ThreadPage.js:17
+commitHookEffectListMount	@	react-dom.development.js:23189
+invokePassiveEffectMountInDEV	@	react-dom.development.js:25193
+invokeEffectsInDev	@	react-dom.development.js:27390
+commitDoubleInvokeEffectsInDEV	@	react-dom.development.js:27369
+flushPassiveEffectsImpl	@	react-dom.development.js:27095
+flushPassiveEffects	@	react-dom.development.js:27023
+commitRootImpl	@	react-dom.development.js:26974
+commitRoot	@	react-dom.development.js:26721
+performSyncWorkOnRoot	@	react-dom.development.js:26156
+flushSyncCallbacks	@	react-dom.development.js:12042
+(anonymous)	@	react-dom.development.js:25690
 api.js:38 
  GET http://localhost:8000/messages/thread/new 500 (Internal Server Error)
+dispatchXhrRequest	@	xhr.js:195
+xhr	@	xhr.js:15
+dispatchRequest	@	dispatchRequest.js:51
 Promise.then		
+_request	@	Axios.js:163
+request	@	Axios.js:40
+(anonymous)	@	Axios.js:213
+wrap	@	bind.js:5
 fetchMessages	@	api.js:38
 fetchThreadData	@	ThreadPage.js:23
 (anonymous)	@	ThreadPage.js:17
-
+commitHookEffectListMount	@	react-dom.development.js:23189
+commitPassiveMountOnFiber	@	react-dom.development.js:24970
+commitPassiveMountEffects_complete	@	react-dom.development.js:24930
+commitPassiveMountEffects_begin	@	react-dom.development.js:24917
+commitPassiveMountEffects	@	react-dom.development.js:24905
+flushPassiveEffectsImpl	@	react-dom.development.js:27078
+flushPassiveEffects	@	react-dom.development.js:27023
+commitRootImpl	@	react-dom.development.js:26974
+commitRoot	@	react-dom.development.js:26721
+performSyncWorkOnRoot	@	react-dom.development.js:26156
+flushSyncCallbacks	@	react-dom.development.js:12042
+(anonymous)	@	react-dom.development.js:25690
+api.js:38 
+ GET http://localhost:8000/messages/thread/new 500 (Internal Server Error)
+dispatchXhrRequest	@	xhr.js:195
+xhr	@	xhr.js:15
+dispatchRequest	@	dispatchRequest.js:51
+Promise.then		
+_request	@	Axios.js:163
+request	@	Axios.js:40
+(anonymous)	@	Axios.js:213
+wrap	@	bind.js:5
+fetchMessages	@	api.js:38
+fetchThreadData	@	ThreadPage.js:23
+(anonymous)	@	ThreadPage.js:17
+commitHookEffectListMount	@	react-dom.development.js:23189
+invokePassiveEffectMountInDEV	@	react-dom.development.js:25193
+invokeEffectsInDev	@	react-dom.development.js:27390
+commitDoubleInvokeEffectsInDEV	@	react-dom.development.js:27369
+flushPassiveEffectsImpl	@	react-dom.development.js:27095
+flushPassiveEffects	@	react-dom.development.js:27023
+commitRootImpl	@	react-dom.development.js:26974
+commitRoot	@	react-dom.development.js:26721
+performSyncWorkOnRoot	@	react-dom.development.js:26156
+flushSyncCallbacks	@	react-dom.development.js:12042
+(anonymous)	@	react-dom.development.js:25690
