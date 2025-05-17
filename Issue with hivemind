@@ -1,1 +1,6 @@
-try { $response = Invoke-WebRequest -Uri "http://localhost:8000/threads" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"title":"Test Thread"}' } catch { $_.ErrorDetails.Message }
+try { 
+    $response = Invoke-WebRequest -Uri "http://localhost:8000/threads" -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"title":"Test Thread"}' 
+    $response.Content
+} catch { 
+    $_.ErrorDetails.Message 
+}
